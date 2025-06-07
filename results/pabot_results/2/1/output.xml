@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3 (Python 3.12.4 on darwin)" generated="2025-06-07T17:44:29.064687" rpa="false" schemaversion="5">
+<suite id="s1" name="MyAvia TestSuite WebApp" source="/Users/apple/WorkSpace/ROBOTFrameWORK/MyAvia_TestSuite_WebApp">
+<suite id="s1-s1" name="Login" source="/Users/apple/WorkSpace/ROBOTFrameWORK/MyAvia_TestSuite_WebApp/Login.robot">
+<test id="s1-s1-t1" name="logon to portal for valid user" line="17">
+<kw name="Setup Actions" owner="SetUp" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-06-07T17:44:29.270831" level="INFO">Opening browser 'Firefox' to base url 'https://practicetestautomation.com/practice-test-login/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-06-07T17:44:29.270514" elapsed="7.456860"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2025-06-07T17:44:36.728829" level="INFO">${browser} = Firefox</msg>
+<arg>${browser}</arg>
+<arg>${BROWSER}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2025-06-07T17:44:36.728080" elapsed="0.000855"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-06-07T17:44:36.729157" elapsed="0.593213"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-07T17:44:37.322904" level="INFO">Running tests on browser: Firefox</msg>
+<arg>Running tests on browser: ${BROWSER}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-07T17:44:37.322592" elapsed="0.000381"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-07T17:44:37.323272" level="INFO">Browser opened and maximized</msg>
+<arg>Browser opened and maximized</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-07T17:44:37.323117" elapsed="0.000224"/>
+</kw>
+<status status="PASS" start="2025-06-07T17:44:29.269777" elapsed="8.053735"/>
+</kw>
+<kw name="Perform Login for valid user">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-07T17:44:37.325604" level="INFO">Typing text 'student' into text field 'id:username'.</msg>
+<arg>${USER_NAME}</arg>
+<arg>${usn}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-07T17:44:37.324605" elapsed="0.077732"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-07T17:44:37.402922" level="INFO">Typing text 'Password123' into text field 'id:password'.</msg>
+<arg>${PASS_WORD}</arg>
+<arg>${passc}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-07T17:44:37.402557" elapsed="0.017001"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-07T17:44:37.420304" level="INFO">Clicking button 'id:submit'.</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-07T17:44:37.419948" elapsed="1.309741"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Logged In Successfully</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-06-07T17:44:38.730102" elapsed="0.020486"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-07T17:44:38.751274" level="INFO">Capturing screenshot after successful login</msg>
+<arg>Capturing screenshot after successful login</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-07T17:44:38.750923" elapsed="0.000487"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-06-07T17:44:39.011892" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="logon%20to%20portal%20for%20valid%20user_Firefox.png"&gt;&lt;img src="logon%20to%20portal%20for%20valid%20user_Firefox.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${TEST_NAME}_${browser}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-06-07T17:44:38.751711" elapsed="0.260333"/>
+</kw>
+<arg>student</arg>
+<arg>Password123</arg>
+<status status="PASS" start="2025-06-07T17:44:37.324070" elapsed="1.688143"/>
+</kw>
+<kw name="Teardown Actions" owner="TearDown" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-06-07T17:44:39.012944" elapsed="0.751955"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-07T17:44:39.765354" level="INFO">Browser closed</msg>
+<arg>Browser closed</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-07T17:44:39.765131" elapsed="0.000299"/>
+</kw>
+<status status="PASS" start="2025-06-07T17:44:39.012547" elapsed="0.752991"/>
+</kw>
+<tag>Smoke_Test_Run_On_Firefox</tag>
+<status status="PASS" start="2025-06-07T17:44:29.268924" elapsed="10.496696"/>
+</test>
+<test id="s1-s1-t2" name="logon to portal for no credentials" line="20">
+<kw name="Setup Actions" owner="SetUp" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-06-07T17:44:39.767334" level="INFO">Opening browser 'Firefox' to base url 'https://practicetestautomation.com/practice-test-login/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-06-07T17:44:39.767027" elapsed="6.141952"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2025-06-07T17:44:45.913485" level="INFO">${browser} = Firefox</msg>
+<arg>${browser}</arg>
+<arg>${BROWSER}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2025-06-07T17:44:45.912406" elapsed="0.001296"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-06-07T17:44:45.914320" elapsed="0.708298"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-07T17:44:46.623331" level="INFO">Running tests on browser: Firefox</msg>
+<arg>Running tests on browser: ${BROWSER}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-07T17:44:46.622981" elapsed="0.000473"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-07T17:44:46.624036" level="INFO">Browser opened and maximized</msg>
+<arg>Browser opened and maximized</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-07T17:44:46.623695" elapsed="0.000538"/>
+</kw>
+<status status="PASS" start="2025-06-07T17:44:39.766665" elapsed="6.857784"/>
+</kw>
+<kw name="Perform Login for no credentials">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-07T17:44:46.626129" level="INFO">Clicking button 'id:submit'.</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-07T17:44:46.625445" elapsed="0.283265"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Your username is invalid!</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-06-07T17:44:46.908930" elapsed="0.005561"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-07T17:44:46.914967" level="INFO">Capturing screenshot on login</msg>
+<arg>Capturing screenshot on login</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-07T17:44:46.914750" elapsed="0.000291"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-06-07T17:44:47.082060" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-06-07T17:44:46.915208" elapsed="0.167020"/>
+</kw>
+<status status="PASS" start="2025-06-07T17:44:46.624882" elapsed="0.457643"/>
+</kw>
+<kw name="Teardown Actions" owner="TearDown" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-06-07T17:44:47.083549" elapsed="1.248906"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-07T17:44:48.333244" level="INFO">Browser closed</msg>
+<arg>Browser closed</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-07T17:44:48.332757" elapsed="0.000654"/>
+</kw>
+<status status="PASS" start="2025-06-07T17:44:47.083028" elapsed="1.250695"/>
+</kw>
+<tag>Smoke_Test_Run_On_Firefox</tag>
+<status status="PASS" start="2025-06-07T17:44:39.766145" elapsed="8.567825"/>
+</test>
+<test id="s1-s1-t3" name="logon to portal for invalid user" line="23">
+<kw name="Setup Actions" owner="SetUp" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-06-07T17:44:48.338080" level="INFO">Opening browser 'Firefox' to base url 'https://practicetestautomation.com/practice-test-login/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-06-07T17:44:48.337503" elapsed="6.891504"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2025-06-07T17:44:55.230195" level="INFO">${browser} = Firefox</msg>
+<arg>${browser}</arg>
+<arg>${BROWSER}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2025-06-07T17:44:55.229584" elapsed="0.000701"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-06-07T17:44:55.230480" elapsed="0.611925"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-07T17:44:55.843125" level="INFO">Running tests on browser: Firefox</msg>
+<arg>Running tests on browser: ${BROWSER}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-07T17:44:55.842717" elapsed="0.000681"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-07T17:44:55.843905" level="INFO">Browser opened and maximized</msg>
+<arg>Browser opened and maximized</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-07T17:44:55.843688" elapsed="0.000314"/>
+</kw>
+<status status="PASS" start="2025-06-07T17:44:48.336762" elapsed="7.507427"/>
+</kw>
+<kw name="Perform Login for invalid user">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-07T17:44:55.849002" level="INFO">Typing text 'test1' into text field 'id:username'.</msg>
+<arg>${USER_NAME}</arg>
+<arg>test1</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-07T17:44:55.848599" elapsed="0.072793"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-07T17:44:55.922094" level="INFO">Typing text 'Password123' into text field 'id:password'.</msg>
+<arg>${PASS_WORD}</arg>
+<arg>${passc}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-07T17:44:55.921669" elapsed="0.014347"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-07T17:44:55.936528" level="INFO">Clicking button 'id:submit'.</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-07T17:44:55.936220" elapsed="0.223591"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Your username is invalid!</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-06-07T17:44:56.160149" elapsed="0.005687"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-07T17:44:56.166279" level="INFO">Capturing screenshot on login</msg>
+<arg>Capturing screenshot on login</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-07T17:44:56.166061" elapsed="0.000292"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-06-07T17:44:56.349426" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="logon%20to%20portal%20for%20invalid%20user_Firefox.png"&gt;&lt;img src="logon%20to%20portal%20for%20invalid%20user_Firefox.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${TEST_NAME}_${browser}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-06-07T17:44:56.166524" elapsed="0.183158"/>
+</kw>
+<arg>Password123</arg>
+<status status="PASS" start="2025-06-07T17:44:55.844704" elapsed="0.505120"/>
+</kw>
+<kw name="Teardown Actions" owner="TearDown" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-06-07T17:44:56.350889" elapsed="0.761531"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-07T17:44:57.112880" level="INFO">Browser closed</msg>
+<arg>Browser closed</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-07T17:44:57.112649" elapsed="0.000310"/>
+</kw>
+<status status="PASS" start="2025-06-07T17:44:56.350330" elapsed="0.762741"/>
+</kw>
+<tag>Smoke_Test_Run_On_Firefox</tag>
+<status status="PASS" start="2025-06-07T17:44:48.335440" elapsed="8.777714"/>
+</test>
+<test id="s1-s1-t4" name="logon to portal for invalid password" line="26">
+<kw name="Setup Actions" owner="SetUp" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-06-07T17:44:57.115143" level="INFO">Opening browser 'Firefox' to base url 'https://practicetestautomation.com/practice-test-login/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-06-07T17:44:57.114653" elapsed="7.081705"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2025-06-07T17:45:04.197497" level="INFO">${browser} = Firefox</msg>
+<arg>${browser}</arg>
+<arg>${BROWSER}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2025-06-07T17:45:04.196915" elapsed="0.000709"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-06-07T17:45:04.197815" elapsed="0.608622"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-07T17:45:04.807371" level="INFO">Running tests on browser: Firefox</msg>
+<arg>Running tests on browser: ${BROWSER}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-07T17:45:04.806759" elapsed="0.000738"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-07T17:45:04.807995" level="INFO">Browser opened and maximized</msg>
+<arg>Browser opened and maximized</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-07T17:45:04.807742" elapsed="0.000391"/>
+</kw>
+<status status="PASS" start="2025-06-07T17:44:57.114237" elapsed="7.694096"/>
+</kw>
+<kw name="Perform Login for invalid password">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-07T17:45:04.810411" level="INFO">Typing text 'student' into text field 'id:username'.</msg>
+<arg>${USER_NAME}</arg>
+<arg>${usn}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-07T17:45:04.809500" elapsed="0.113382"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-07T17:45:04.924115" level="INFO">Typing text 'test1' into text field 'id:password'.</msg>
+<arg>${PASS_WORD}</arg>
+<arg>test1</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-07T17:45:04.923540" elapsed="0.022593"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-07T17:45:04.947380" level="INFO">Clicking button 'id:submit'.</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-07T17:45:04.946444" elapsed="0.253084"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Your password is invalid!</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-06-07T17:45:05.199831" elapsed="0.006628"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-07T17:45:05.207109" level="INFO">Capturing screenshot on login</msg>
+<arg>Capturing screenshot on login</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-07T17:45:05.206667" elapsed="0.000525"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-06-07T17:45:05.397493" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="logon%20to%20portal%20for%20invalid%20password_Firefox.png"&gt;&lt;img src="logon%20to%20portal%20for%20invalid%20password_Firefox.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${TEST_NAME}_${browser}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-06-07T17:45:05.207465" elapsed="0.190152"/>
+</kw>
+<arg>student</arg>
+<status status="PASS" start="2025-06-07T17:45:04.808819" elapsed="0.588920"/>
+</kw>
+<kw name="Teardown Actions" owner="TearDown" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-06-07T17:45:05.398360" elapsed="0.961497"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-07T17:45:06.360796" level="INFO">Browser closed</msg>
+<arg>Browser closed</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-07T17:45:06.360364" elapsed="0.000598"/>
+</kw>
+<status status="PASS" start="2025-06-07T17:45:05.398029" elapsed="0.963163"/>
+</kw>
+<status status="PASS" start="2025-06-07T17:44:57.113643" elapsed="9.247718"/>
+</test>
+<status status="PASS" start="2025-06-07T17:44:29.105738" elapsed="37.257485"/>
+</suite>
+<status status="PASS" start="2025-06-07T17:44:29.087033" elapsed="37.278165"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="3" fail="0" skip="0">Smoke_Test_Run_On_Firefox</stat>
+</tag>
+<suite>
+<stat name="MyAvia TestSuite WebApp" id="s1" pass="4" fail="0" skip="0">MyAvia TestSuite WebApp</stat>
+<stat name="Login" id="s1-s1" pass="4" fail="0" skip="0">MyAvia TestSuite WebApp.Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

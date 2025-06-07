@@ -1,0 +1,6 @@
+datasources:cf4a06bb47ee931f1da095288b95b0604b83bcf3
+commandlineoptions:97d170e1550eee4afc0af065b78cda302a97674c
+suitesfrom:no-suites-from-option
+file:c8e5ba822daf39c2e6acd8762e3cbacc770cd79f
+--suite MyAvia TestSuite WebApp.Login
+--suite MyAvia TestSuite WebApp.navigationOnHome

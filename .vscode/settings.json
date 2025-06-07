@@ -1,0 +1,7 @@
+{
+  "robot.pythonpath": [
+    "${workspaceFolder}/venv/lib/python3.12/site-packages",
+    "${workspaceFolder}/lib"
+  ],
+  "robot.language-server.python": "${workspaceFolder}/venv/bin/python"
+}

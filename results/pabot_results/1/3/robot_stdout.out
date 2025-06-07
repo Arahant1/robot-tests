@@ -1,0 +1,16 @@
+==============================================================================
+MyAvia TestSuite WebApp                                                       
+==============================================================================
+MyAvia TestSuite WebApp.navigationOnHome                                      
+==============================================================================
+Naviagte on Home page                                                 | PASS |
+------------------------------------------------------------------------------
+Navigate on Practice page                                             | PASS |
+------------------------------------------------------------------------------
+MyAvia TestSuite WebApp.navigationOnHome                              | PASS |
+2 tests, 2 passed, 0 failed
+==============================================================================
+MyAvia TestSuite WebApp                                               | PASS |
+2 tests, 2 passed, 0 failed
+==============================================================================
+Output:  /Users/apple/WorkSpace/ROBOTFrameWORK/results/pabot_results/1/3/output.xml
